@@ -129,7 +129,10 @@
   <ItemGroup>
     <ClCompile Include="Bank_CPP.cpp" />
     <ClCompile Include="Bank_CStyle.cpp" />
-    <ClCompile Include="Shape_poly.cpp" />
+    <ClCompile Include="CoffeeMachine.cpp" />
+    <ClCompile Include="hello.cpp" />
+    <ClCompile Include="Shape_inherit.cpp" />
+    <ClCompile Include="Shape_noinherit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

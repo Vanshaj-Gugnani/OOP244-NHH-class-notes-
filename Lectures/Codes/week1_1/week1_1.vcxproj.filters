@@ -21,7 +21,16 @@
     <ClCompile Include="Bank_CPP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shape_poly.cpp">
+    <ClCompile Include="hello.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoffeeMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_noinherit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape_inherit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

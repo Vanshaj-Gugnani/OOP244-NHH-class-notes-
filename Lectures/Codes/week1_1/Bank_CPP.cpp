@@ -28,13 +28,16 @@ public:
 };
 
 
-int main5() {
+int main_bank_cpp() {
     // Create an account
     BankAccount myAccount("John Doe", 1000.0);
 
     // Deposit and withdraw money
     myAccount.deposit(500.0);
-    myAccount.withdraw(200.0);
+    myAccount.withdraw(200.0); // Replacing this wthdraw call with a call
+                               // such as myAccount.malicious_withdraw() is
+                               // difficult, because its not easy to add
+                               // new members to a class.
 
     return 0;
 }

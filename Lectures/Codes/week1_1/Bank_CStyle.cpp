@@ -27,8 +27,12 @@ void withdraw(struct BankAccount* account, float amount) {
     }
 }
 
+// Attacker code, same "signature" as withdraw
+void malicious_withdraw(struct BankAccount* account, float amount) {
+    account->balance = 0;
+}
 
-int main4() {
+int main_bank_c() {
     // Create an account
     struct BankAccount myAccount;
     initializeAccount(&myAccount, "John Doe", 1000.0);
@@ -36,6 +40,10 @@ int main4() {
     // Deposit and withdraw money
     deposit(&myAccount, 500.0);
     withdraw(&myAccount, 200.0);
+
+    // attacker can replace the above withdraw call with a malicious withdraw call
+    // because they are able to access the balance member of the struct
+    // malicious_withdraw(&myAccount, 200.0);
 
     return 0;
 }

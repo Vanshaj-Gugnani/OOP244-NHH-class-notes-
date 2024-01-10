@@ -1,20 +1,18 @@
 #include <iostream>
-using namespace std;
 
 // Base class for a generic shape
 class Quadrilateral {
-public:
+private:
     int width;
     int height;
+public:
 
+    // constructor
     Quadrilateral(int w, int h) : width(w), height(h) {}
 
     void print() const {
         std::cout << "Width: " << width << ", Height: " << height << std::endl;
     }
-
-    virtual int calculatePerim() { return width + height; }
-    
 };
 
 // Derived class for a specific shape: Rectangle
@@ -27,22 +25,33 @@ public:
 class Square : public Quadrilateral {
 public:
     Square(int side) : Quadrilateral(side, side) {}
-    
 };
 
+// Derived class for a specific shape: Parallelogram
+class Parallelogram : public Quadrilateral {
+public:
+    Parallelogram(int w, int h) : Quadrilateral(w, h) {}
+};
+
+// Derived class for a specific shape: Rhombus
+class Rhombus : public Quadrilateral {
+public:
+    Rhombus(int side) : Quadrilateral(side, side) {}
+};
 
 int main() {
 
     // With inheritance
-    Rectangle rectangle = Rectangle(8, 8);
-    Square square = Square(5);
+    Rectangle rectangle(8, 6);
+    Square square(4);
+
+    Quadrilateral* shapes[] = { &rectangle, &square };
 
     std::cout << "Rectangle: ";
-    cout << rectangle.calculatePerim() << endl;
+    shapes[0]->print();  // Output: Width: 8, Height: 6
 
     std::cout << "Square: ";
-    cout << square.calculatePerim() << endl;
-
+    shapes[1]->print();     // Output: Width: 4, Height: 4
 
     return 0;
 }

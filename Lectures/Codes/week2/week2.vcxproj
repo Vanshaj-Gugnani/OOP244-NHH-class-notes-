@@ -130,6 +130,8 @@
     <ClCompile Include="draw_line.cpp" />
     <ClCompile Include="InitVsAlloca.cpp" />
     <ClCompile Include="line.cpp" />
+    <ClCompile Include="MyVector.cpp" />
+    <ClCompile Include="MyVectorMain.cpp" />
     <ClCompile Include="print_bool.cpp" />
     <ClCompile Include="References.cpp" />
     <ClCompile Include="ReturnRef.cpp" />
@@ -139,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="line.h" />
+    <ClInclude Include="MyVector.h" />
     <ClInclude Include="Transaction.h" />
     <ClInclude Include="transact_main.h" />
   </ItemGroup>

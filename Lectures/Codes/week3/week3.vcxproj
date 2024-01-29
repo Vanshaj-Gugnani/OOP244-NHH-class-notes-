@@ -19,9 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Output.h" />
     <ClInclude Include="SuperHero.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Output.cpp" />
+    <ClCompile Include="OutputMain.cpp" />
+    <ClCompile Include="output_format.cpp" />
     <ClCompile Include="SuperHero.cpp" />
     <ClCompile Include="SuperHeroMain.cpp" />
   </ItemGroup>

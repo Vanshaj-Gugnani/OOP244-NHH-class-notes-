@@ -7,7 +7,7 @@ namespace seneca {
 	// Utility function for strcpy
 	void SuperHero::strcpy_nhh(char* dest, const char* src)
 	{
-		
+
 		while (*src != '\0') {
 			*dest = *src;
 			++dest;
@@ -46,11 +46,14 @@ namespace seneca {
 
 	// If we keep the following all inclusive constructor, we do not need to 
 	// keep the above two constructors.
-	SuperHero::SuperHero(const char* heroName, const char* heroPower, int heroAge, int heroPowerLevel)
+
+	// The same name for the argument and the member variable is a BAD PRACTICE.
+	// Though in this situation we break the tie using the "this" pointer
+	SuperHero::SuperHero(const char* name, const char* heroPower, int heroAge, int heroPowerLevel)
 	{
 		cout << "CONS3 called" << endl;
-		name = new char[strlen(heroName) + 1];
-		strcpy_nhh(name, heroName);
+		(*this).name = new char[strlen(name) + 1];
+		strcpy_nhh(this->name, name);
 
 		power = new char[strlen(heroPower) + 1];
 		strcpy_nhh(power, heroPower);
@@ -69,8 +72,15 @@ namespace seneca {
 	}
 
 
-	void SuperHero::display()
+	ostream& SuperHero::display(ostream& ostr)
 	{
-		cout << name << "," << power << "," << age << "," << powerLevel << endl;
+		ostr << name << "," << power << "," << age << "," << powerLevel << endl;
+		return ostr;
+	}
+	SuperHero& SuperHero::setPowerLevel(int powerLevelVal)
+	{
+		powerLevel = powerLevelVal;
+		// TODO: insert return statement here
+		return *this;
 	}
 }

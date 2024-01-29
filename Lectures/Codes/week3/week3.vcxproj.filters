@@ -18,12 +18,24 @@
     <ClInclude Include="SuperHero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Output.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SuperHero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SuperHeroMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output_format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Output.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

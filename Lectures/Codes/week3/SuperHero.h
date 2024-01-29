@@ -1,5 +1,8 @@
 #ifndef SENECA_SUPERHERO_H__
 #define SENECA_SUPERHERO_H__
+
+#include<iostream>
+using namespace std;
 namespace seneca {
 	class SuperHero
 	{
@@ -14,11 +17,12 @@ namespace seneca {
 		//SuperHero(const char*); // overloaded constructor
 
 		// constructor with default arguments
-		SuperHero(const char* heroName = "UNKNOWN", const char* heroPower = "UNKNOWN", int heroAge =0, int heroPowerLevel = 0);
-		
+		SuperHero(const char* heroName = "UNKNOWN", const char* heroPower = "UNKNOWN", int heroAge = 0, int heroPowerLevel = 0);
+
 		// Destructor
 		~SuperHero();
-		void display();
+		ostream& display(ostream& ostr = std::cout);
+		SuperHero& setPowerLevel(int powerLevelVal);
 	};
 }
 #endif

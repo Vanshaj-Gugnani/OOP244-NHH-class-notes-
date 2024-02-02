@@ -38,11 +38,23 @@ namespace sdds {
 	{
 		return Double(-val);
 	}
+	Double& Double::operator++()
+	{
+		// TODO: insert return statement here
+		val++;
+		return *this;
+	}
+	Double Double::operator++(int)
+	{
+		Double temp = *this;
+		++(*this); 
+		return temp;
+	}
 	Double::operator bool()
 	{
 		return val != 0.0;
 	}
-	double Double::getVal()
+	double Double::getVal() const
 	{
 		return val;
 	}
@@ -50,5 +62,12 @@ namespace sdds {
 	{
 		return RO + LO; // optimized call
 		// return Double(LO+RO.getVal());
+	}
+	bool operator==(const Double& LO, const Double& RO)
+	{
+		// When we made the function friend, we can have access
+		// to private members
+		if (LO.val == RO.getVal()) { return true; }
+		return false;
 	}
 }

@@ -15,8 +15,8 @@ namespace sdds {
 		istream& read(istream& istr = cin);
 
 		// plus operator
-		Double operator+(Double& RO);
-		Double operator+(double RO);
+		Double operator+(Double& RO); // a+b
+		Double operator+(double RO); // a+3.5
 
 		// plus_eq operator
 		Double& operator+=(Double& RO);
@@ -24,16 +24,23 @@ namespace sdds {
 		// unary -
 		Double operator-();
 
+		// prefix operator
+		Double& operator++();
+
+		// post-fix operator
+		Double operator++(int);
+
 		// bool operator
 		operator bool();
 		// getter
-		double getVal();
+		double getVal() const ;
 
-
+		friend bool operator==(const Double& LO, const Double& RO);
 	};
 
 	// helper operator plus
-	Double operator+ (double LO, Double& RO);
+	Double operator+ (double LO, Double& RO); // 3.5 + a
+	bool operator==(const Double& LO, const Double& RO);
 }
 #endif
 

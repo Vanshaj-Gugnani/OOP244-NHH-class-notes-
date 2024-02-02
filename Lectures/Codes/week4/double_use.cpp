@@ -26,7 +26,11 @@ int main() {
 	//if (e) { cout << "Non 0" << endl; }
 
 	//f = (Double)2.5; // explicit cast
-	f = 2.5;  // implicit cast, done by compiler
+	//f = 2.5;  // implicit cast, done by compiler
+	//++e; // prefix
+	//f = e++;
+
+	if (d == e) { cout << "Equal val " << endl; }
 	
 
 	cout.setf(ios::fixed);

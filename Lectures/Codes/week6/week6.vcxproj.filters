@@ -21,5 +21,8 @@
     <ClCompile Include="getint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="string_example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

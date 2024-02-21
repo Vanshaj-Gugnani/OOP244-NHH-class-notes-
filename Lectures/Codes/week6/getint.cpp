@@ -34,7 +34,7 @@ int getInt() {
 }
 
 
-int main() {
+int main_getint() {
 
 	int res;
 	res = getInt();

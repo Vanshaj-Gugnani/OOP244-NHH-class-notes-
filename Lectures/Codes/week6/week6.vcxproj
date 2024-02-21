@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="cin.cpp" />
     <ClCompile Include="getint.cpp" />
+    <ClCompile Include="string_example.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

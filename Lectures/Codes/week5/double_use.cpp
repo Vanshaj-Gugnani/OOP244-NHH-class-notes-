@@ -34,7 +34,8 @@ int main_double() {
 	//if (d == e) { cout << "Equal val " << endl; }
 
 	int res;
-	res = (int)e;
+	res = (int)e; // explicit cast
+	//res = e; // not possible when you overload the casting operator as explicit
 
 	cout << "Casted int " << res << endl;
 

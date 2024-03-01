@@ -10,7 +10,7 @@ int main(){
 
 	//Label L{ "Hello" }; // explicit call to single arg cons called
 
-	//Label L = "Hi"; // object initialization, will not work 
+	Label L = "Hi"; // object initialization, will not work 
 					// if single arg cons is marked "explicit"
 					// Even if overloaded an assignment operator.
 

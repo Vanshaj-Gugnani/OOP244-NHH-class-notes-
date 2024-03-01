@@ -8,7 +8,8 @@ namespace sdds {
 	private:
 		double val;
 	public:
-		// constructor
+		// constructor, if you make the following explicit, f = 10.0; will not work
+		// until you overload the assignment operator
 		Double(double d_val = 0.0);
 		// member functions
 		ostream& print(ostream& ostr = cout);

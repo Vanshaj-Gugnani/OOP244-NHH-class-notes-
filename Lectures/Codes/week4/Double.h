@@ -40,7 +40,7 @@ namespace sdds {
 
 	// helper operator plus
 	Double operator+ (double LO, Double& RO); // 3.5 + a
-	bool operator==(const Double& LO, const Double& RO);
+	bool operator==(const Double& LO, const Double& RO); // a == b
 }
 #endif
 

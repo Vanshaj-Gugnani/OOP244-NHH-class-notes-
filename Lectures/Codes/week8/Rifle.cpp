@@ -41,3 +41,11 @@ seneca::Rifle::~Rifle()
 }
 
 
+std::ostream& seneca::operator<<(std::ostream& ostr, Rifle& r)
+{
+	// TODO: insert return statement here
+	ostr << "Outputting rifle " << endl;
+	return ostr;
+}
+
+

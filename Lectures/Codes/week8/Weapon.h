@@ -24,5 +24,7 @@ namespace seneca {
 		~Weapon();
 
 	};
+
+	std::ostream& operator<<(std::ostream& ostr, Weapon& r);
 }
 #endif

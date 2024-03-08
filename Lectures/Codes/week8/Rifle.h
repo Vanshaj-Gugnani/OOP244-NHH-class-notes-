@@ -20,6 +20,9 @@ namespace seneca {
 
 		~Rifle();
 	};
+
+	std::ostream& operator<<(std::ostream& ostr, Rifle& r);
+
 }
 #endif
 

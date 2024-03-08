@@ -26,11 +26,14 @@ int main() {
 	r.reload();
 	r.fire();*/
 
-	r.display(std::cout);
+	/*r.display(std::cout);
 
 	r.display(std::cout, 4);
 
-	r.display(120);
+	r.display(120);*/
+
+	
+	cout << r << endl;
 
 
 

@@ -58,6 +58,9 @@ seneca::Weapon::~Weapon()
 	cout << "Destroying weapon" << endl;
 }
 
-
-
-
+std::ostream& seneca::operator<<(std::ostream& ostr, Weapon& r)
+{
+	// TODO: insert return statement here
+	ostr << "Outputting weapon " << endl;
+	return ostr;
+}
